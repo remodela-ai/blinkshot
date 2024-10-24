@@ -1,5 +1,7 @@
+"use client";
+
+import Logo from "@/components/logo";
 import Spinner from "@/components/spinner";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
@@ -59,6 +61,12 @@ export default function Component() {
 
   return (
     <div className="flex h-full flex-col px-5">
+      <header className="flex justify-center pt-20 md:justify-end md:pt-3">
+        <div className="absolute left-1/2 top-6 -translate-x-1/2">
+          <Logo />
+        </div>
+      </header>
+
       <div className="flex justify-center">
         <form className="mt-10 w-full max-w-lg">
           <fieldset>
