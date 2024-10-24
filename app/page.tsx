@@ -1,5 +1,3 @@
-"use client";
-
 import Logo from "@/components/logo";
 import Spinner from "@/components/spinner";
 import { Input } from "@/components/ui/input";
