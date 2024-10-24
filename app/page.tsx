@@ -61,28 +61,6 @@ export default function Home() {
     activeIndex !== undefined ? generations[activeIndex].image : undefined;
 
   return (
-    <div className="flex h-full flex-col px-5">
-        </div>
-        <div>
-          <label className="text-xs text-gray-200">
-            [Optional] Add your{" "}
-            <a
-              href="https://api.together.xyz/settings/api-keys"
-              target="_blank"
-              className="underline underline-offset-4 transition hover:text-blue-500"
-            >
-              Together API Key
-            </a>{" "}
-          </label>
-          <Input
-            placeholder="API Key"
-            type="password"
-            value={userAPIKey}
-            className="mt-1 bg-gray-400 text-gray-200 placeholder:text-gray-300"
-            onChange={(e) => setUserAPIKey(e.target.value)}
-          />
-        </div>
-      </header>
 
       <div className="flex justify-center">
         <form className="mt-10 w-full max-w-lg">
@@ -128,7 +106,6 @@ export default function Home() {
             </p>
             <p className="mt-4 text-balance text-sm text-gray-300 md:text-base lg:text-lg">
               Enter a prompt and generate images in milliseconds as you type.
-              Powered by Flux on Together AI.
             </p>
           </div>
         ) : (
@@ -169,39 +146,7 @@ export default function Home() {
       </div>
 
       <footer className="mt-16 w-full items-center pb-10 text-center text-gray-300 md:mt-4 md:flex md:justify-between md:pb-5 md:text-xs lg:text-sm">
-        <p>
-          Powered by{" "}
-          <a
-            href="https://www.dub.sh/together-ai"
-            target="_blank"
-            className="underline underline-offset-4 transition hover:text-blue-500"
-          >
-            Together.ai
-          </a>{" "}
-          &{" "}
-          <a
-            href="https://dub.sh/together-flux"
-            target="_blank"
-            className="underline underline-offset-4 transition hover:text-blue-500"
-          >
-            Flux
-          </a>
-        </p>
 
-        <div className="mt-8 flex items-center justify-center md:mt-0 md:justify-between md:gap-6">
-          <p className="hidden whitespace-nowrap md:block">
-            100% free and{" "}
-            <a
-              href="https://github.com/Nutlope/blinkshot"
-              target="_blank"
-              className="underline underline-offset-4 transition hover:text-blue-500"
-            >
-              open source
-            </a>
-          </p>
-
-
-            </a>
           </div>
         </div>
       </footer>
