@@ -1,3 +1,5 @@
+"use client";
+
 import Logo from "@/components/logo";
 import Spinner from "@/components/spinner";
 import { Input } from "@/components/ui/input";
@@ -14,7 +16,7 @@ type ImageResponse = {
   timings: { inference: number };
 };
 
-export default function Component() {
+export default function Home() {
   const [prompt, setPrompt] = useState("");
   const [iterativeMode, setIterativeMode] = useState(false);
   const debouncedPrompt = useDebounce(prompt, 300);
