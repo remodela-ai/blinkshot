@@ -16,10 +16,9 @@ type ImageResponse = {
   timings: { inference: number };
 };
 
-export default function Home() {
+export default function Component() {
   const [prompt, setPrompt] = useState("");
   const [iterativeMode, setIterativeMode] = useState(false);
-  const [userAPIKey, setUserAPIKey] = useState("");
   const debouncedPrompt = useDebounce(prompt, 300);
   const [generations, setGenerations] = useState<
     { prompt: string; image: ImageResponse }[]
@@ -35,7 +34,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt, userAPIKey, iterativeMode }),
+        body: JSON.stringify({ prompt, iterativeMode }),
       });
 
       if (!res.ok) {
@@ -61,7 +60,7 @@ export default function Home() {
     activeIndex !== undefined ? generations[activeIndex].image : undefined;
 
   return (
-
+    <div className="flex h-full flex-col px-5">
       <div className="flex justify-center">
         <form className="mt-10 w-full max-w-lg">
           <fieldset>
@@ -144,12 +143,6 @@ export default function Home() {
           </div>
         )}
       </div>
-
-      <footer className="mt-16 w-full items-center pb-10 text-center text-gray-300 md:mt-4 md:flex md:justify-between md:pb-5 md:text-xs lg:text-sm">
-
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
